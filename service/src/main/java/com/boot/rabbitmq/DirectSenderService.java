@@ -12,7 +12,7 @@ import javax.annotation.Resource;
  * @date 2020/2/14
  */
 @Service
-public class SimpleSenderService {
+public class DirectSenderService {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
 
@@ -20,13 +20,13 @@ public class SimpleSenderService {
     private AmqpTemplate rabbitTemplate;
 
     public void sendString(String message) {
-        logger.info("simple sender : " + message);
-        this.rabbitTemplate.convertAndSend("simple", message);
+        logger.info("direct sender : " + message);
+        this.rabbitTemplate.convertAndSend("direct", message);
     }
 
     public void sendObject(Object message) {
         String messageStr = JSONObject.toJSONString(message);
         logger.info(messageStr);
-        this.rabbitTemplate.convertAndSend("simple", messageStr);
+        this.rabbitTemplate.convertAndSend("direct", messageStr);
     }
 }

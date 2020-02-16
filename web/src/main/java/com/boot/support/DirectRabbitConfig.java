@@ -9,9 +9,9 @@ import org.springframework.context.annotation.Configuration;
  * @date 2020/2/14
  */
 @Configuration
-public class RabbitConfig {
+public class DirectRabbitConfig {
     @Bean
-    public Queue simple() {
-        return new Queue("simple");
+    public Queue direct() {
+        return new Queue("direct");
     }
 }
