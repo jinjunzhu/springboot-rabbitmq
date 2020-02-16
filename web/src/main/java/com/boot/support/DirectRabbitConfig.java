@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @author jinjunzhu
  * @date 2020/2/14
- * 注：也可以不声明exchange和进行绑定，使用rabbitmq自带的exchange
+ * 注：也可以不声明exchange和进行绑定，使用rabbitmq默认的exchange
  */
 @Configuration
 public class DirectRabbitConfig {
