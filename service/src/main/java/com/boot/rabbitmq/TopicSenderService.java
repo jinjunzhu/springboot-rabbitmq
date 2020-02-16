@@ -20,11 +20,11 @@ public class TopicSenderService {
 
     public void send1(String message) {
         logger.info("topic sender1 : " + message);
-        this.rabbitTemplate.convertAndSend("topicExchange", "topic.message", message);
+        rabbitTemplate.convertAndSend("topicExchange", "topic.message", message);
     }
 
     public void send2(String message) {
         logger.info("topic sender2 : " + message);
-        this.rabbitTemplate.convertAndSend("topicExchange", "topic.message2", message);
+        rabbitTemplate.convertAndSend("topicExchange", "topic.message2", message);
     }
 }

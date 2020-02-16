@@ -20,6 +20,6 @@ public class FanoutSenderService {
 
     public void send(String message) {
         logger.info("fanout sender : {}", message);
-        this.rabbitTemplate.convertAndSend("fanoutExchange","", message);
+        rabbitTemplate.convertAndSend("fanoutExchange","", message);
     }
 }

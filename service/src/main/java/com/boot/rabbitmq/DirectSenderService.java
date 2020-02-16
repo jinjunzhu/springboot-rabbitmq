@@ -21,12 +21,12 @@ public class DirectSenderService {
 
     public void sendString(String message) {
         logger.info("direct sender : " + message);
-        this.rabbitTemplate.convertAndSend("directExchange", "direct", message);
+        rabbitTemplate.convertAndSend("directExchange", "direct", message);
     }
 
     public void sendObject(Object message) {
         String messageStr = JSONObject.toJSONString(message);
         logger.info(messageStr);
-        this.rabbitTemplate.convertAndSend("directExchange", "direct", messageStr);
+        rabbitTemplate.convertAndSend("directExchange", "direct", messageStr);
     }
 }
