@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 /**
  * @author jinjunzhu
  * @date 2020/2/14
- * 六种工作模式：direct/work/{publish/subscribe}/routing/topic/RPC
+ * 四种exchange：direct/topic/fanout/headers
  */
 @Service
 public class ReceiverService {
