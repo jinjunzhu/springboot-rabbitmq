@@ -39,10 +39,10 @@ public class HeadersRabbitConfig {
 
     @Bean
     public Binding bindingExchange(Queue headerQueue, HeadersExchange headerExchange) {
-        Map<String,Object> headerValues = new HashMap<>(3);
-        headerValues.put("param1", "value1");
-        headerValues.put("param2", "value2");
-        return BindingBuilder.bind(headerQueue).to(headerExchange).whereAll(headerValues).match();
+        Map<String,Object> header = new HashMap<>(3);
+        header.put("param1", "value1");
+        header.put("param2", "value2");
+        return BindingBuilder.bind(headerQueue).to(headerExchange).whereAll(header).match();
     }
 
     @Bean
