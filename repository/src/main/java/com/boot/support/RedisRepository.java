@@ -9,7 +9,7 @@ import javax.annotation.Resource;
  * @author jinjunzhu
  * @date 2020/2/25
  */
-@Repository
+//@Repository
 public class RedisRepository {
 
     @Resource
