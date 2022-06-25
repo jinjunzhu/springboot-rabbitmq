@@ -10,6 +10,7 @@ import javax.annotation.Resource;
 /**
  * @author jinjunzhu
  * @date 2020/2/14
+ * test
  */
 @Service
 public class DirectSenderService {
